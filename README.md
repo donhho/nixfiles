@@ -1,20 +1,23 @@
+# `donhho/nixfiles`
+
 ## Troubleshooting
+Discord
 ```bash
-# Fix to get Discord working
+# Fix
 sudo tee /etc/sysctl.d/99-userns.conf >/dev/null <<EOF
 kernel.apparmor_restrict_unprivileged_userns=0
 EOF
 
 sudo sysctl --system
 
-# Undoing it
+# Undo
 sudo rm /etc/sysctl.d/99-userns.conf
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=1
 sudo sysctl --system
 cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns # Expected: 1
 ```
 
-Setup MarkdownPreview in Neovim:
+MarkdownPreview
 ```
 :call mkdp#util#install()
 ```

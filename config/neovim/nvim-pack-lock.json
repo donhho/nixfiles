@@ -16,6 +16,14 @@
       "rev": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
       "src": "https://github.com/iamcco/markdown-preview.nvim"
     },
+    "mason.nvim": {
+      "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.diff": {
+      "rev": "0743d26bd858ebe32efcf5c86a91a422a000f273",
+      "src": "https://github.com/nvim-mini/mini.diff"
+    },
     "mini.extra": {
       "rev": "e5ecf197f8954d002cb9e85b3715851e2c8d3cd5",
       "src": "https://github.com/nvim-mini/mini.extra"
