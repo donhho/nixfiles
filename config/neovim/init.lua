@@ -1,6 +1,8 @@
 vim.pack.add({
   { src = "https://github.com/vague2k/vague.nvim" },
   { src = "https://github.com/nvim-mini/mini.pick" },
+  { src = "https://github.com/nvim-mini/mini.diff" },
+  { src = "https://github.com/nvim-mini/mini.pairs" },
   { src = "https://github.com/nvim-mini/mini.extra" },
   { src = "https://github.com/nvim-mini/mini.icons" },
   { src = "https://github.com/hrsh7th/nvim-cmp" },
@@ -13,7 +15,7 @@ vim.pack.add({
 vim.g.mapleader = " "
 
 require("vague").setup({
-  bold = false,
+  -- bold = false,
   transparent = false,
 })
 
@@ -31,24 +33,9 @@ vim.opt.undofile = true
 vim.opt.termguicolors = true
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-require "mini.pick".setup({
-  mappings = {
-    mark_all_to_quickfix = {
-      char = "<C-q>",
-      func = function()
-        local picker = require("mini.pick").get_active_picker()
-        if picker == nil then return end
-
-        local items = picker.items
-        if #items == 0 then return end
-
-        vim.fn.setqflist(items)
-        vim.cmd("copen")
-        require("mini.pick").stop()
-      end
-    }
-  }
-})
+require "mini.pick".setup()
+require "mini.diff".setup()
+require "mini.pairs".setup()
 require "mini.extra".setup()
 require "mini.icons".setup()
 
@@ -101,7 +88,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       require("mini.extra").pickers.lsp({ scope = "declaration" })
     end)
 
-    map("n", "<leader>os", function()
+    map("n", "<leader>gs", function()
       require("mini.extra").pickers.lsp({ scope = "document_symbol"})
     end)
 

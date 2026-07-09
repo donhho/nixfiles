@@ -21,3 +21,8 @@ MarkdownPreview
 ```
 :call mkdp#util#install()
 ```
+
+Doom Emacs:
+```
+~/.config/emacs/bin/doom install
+```

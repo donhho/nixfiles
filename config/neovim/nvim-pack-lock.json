@@ -32,6 +32,10 @@
       "rev": "e56797f90192d81f1fda02e662fc3e8e3d775027",
       "src": "https://github.com/nvim-mini/mini.icons"
     },
+    "mini.pairs": {
+      "rev": "fd150ac39b78e6a2286f5138e472b7dc7eba43b9",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
     "mini.pick": {
       "rev": "8c1f75f8ddd8c9f75d07ed2ab5718d2c3cb65a66",
       "src": "https://github.com/nvim-mini/mini.pick"
